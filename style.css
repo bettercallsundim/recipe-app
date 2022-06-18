@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+body{
+font-family: 'Rubik', sans-serif;
+}
+
+.main{
+  background: #59C173;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+min-height: 100vh;
+background-attachment: fixed;
+background-repeat: no-repeat;
+color: rgb(239, 239, 239);
+position: relative;
+}
+.recipePage{
+  display: none;
+  background: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+}
+.absPageImg img{
+  width: 100%;
+object-fit: cover;
+}
+@media screen and (max-width: 768px){
+  .absPageImg img{
+    width: 100%;
+
+    aspect-ratio: 16/9;
+  }
+  .absPageImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .absPageContent{
+    margin: 1.5rem auto;
+  }
+  .closeModal{
+    position: fixed !important;
+    top: unset !important;
+    left: unset;
+    bottom:1rem;
+    right:1rem;
+  }
+}
+
+
+ol{
+  list-style-position: inside;
+}
+.recrow{
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.closeModal{
+  position: absolute;
+  top:1rem;
+  right:1rem;
+  font-size: 2rem;
+  color: red;
+  transition: .3s all;
+  /* background-color: gray; */
+}
+.closeModal:hover{
+  font-weight: 900;
+}
+
+
+
+.item img{
+  display: block;
+  object-fit: cover;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid rgb(232, 232, 232);
+}
+.fav-box .item{
+  flex-shrink: 0;
+flex-basis:10% ;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis ellipsis;
+}
+.fav-box{
+  overflow-x: hidden;
+
+}
+
+.fav-box .item{
+  position: relative;
+  transition: .3s all;
+  padding: 0 10px;
+}
+.fav-box .item:hover {
+  transform: scale(1.001);
+color:rgb(196, 196, 196) ;
+}
+.fav-box .item:hover i{
+display: block;
+}
+.fav-box .item i{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 14px;
+  color: rgb(235, 218, 218);
+  font-weight: bold;
+  transition: .3s all;
+  display: none;
+}
+.fav-box .item i:hover{
+  color: rgb(244, 149, 149);
+}
+.card img{
+  width: 100%;
+  aspect-ratio: 16/12 !important;
+  object-fit: cover;
+
+}
+.cat-item-box .card{
+ flex-grow: 1;
+ /* max-width: 25%; */
+}
+
+.search-item-box {
+flex-grow: 1;
+}
+.cat-item-box {
+flex-grow: 1;
+}
+.card{
+  position: relative;
+  flex-shrink: 1;
+  flex-basis: 23%;
+  border-radius: .5rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .card{
+    flex-basis: unset;
+  }
+  .cat-box .item {
+    flex-basis: 12% !important;
+  }
+  .fav-box .item{
+  flex-basis:15% ;
+  }
+}
+
+
+.card .heart{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  background-color: #000000;
+  border-radius: 50%;
+  color: rgb(231, 231, 231);
+
+}
+.card .heart:hover{
+  color: rgb(130, 130, 130);
+}
+.heart.active:hover i{
+  color: rgb(255, 7, 7);
+}
+.card-body{
+  padding: .5rem;
+}
+h4 i{
+  font-size: 1rem;
+color: white;
+margin-left: 1rem;
+transition: .3s all;}
+h4 i:hover{
+color: rgb(255, 100, 201);
+font-weight: bold;
+}
+
+.heart.active i{
+  color: rgb(255, 52, 154);
+}
+.fav-box .item p{
+  font-size: .8rem;
+  margin-top: .3rem;
+ align-self: flex-start;
+
+}
+.cat-box .item p{
+  font-size: .8rem;
+  margin-top: .3rem;
+
+}
+.cat-box .item {
+  flex-basis: 9%;
+  flex-shrink: 0;
+
+}
+.cat-box{
+  overflow-x: hidden;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0-beta1/js/bootstrap.bundle.min.js" integrity="sha512-ndrrR94PW3ckaAvvWrAzRi5JWjF71/Pw7TlSo6judANOFCmz0d+0YE+qIGamRRSnVzSvIyGs4BTtyFMm3MT/cg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<script src="./app.js" defer></script>
+</head>
+<body>
+<div class="main">
+  <!----absolute page------>
+  <div class="recipePage">
+    <i class="fa-regular fa-circle-xmark closeModal"></i>
+    <div class="container">
+      <div class="row recrow d-flex flex-column flex-md-row  justify-content-center align-items-center">
+        <div class="col-md-7 absPageImg align-self-md-start">
+          <img src="./photo-1500530855697-b586d89ba3ee.jpg" alt="">
+        </div>
+        <div class="col-md-5 absPageContent d-flex flex-column justify-content-center ">
+          <h4 class="abstitle"></h4>
+          <ol class="ing-measures p-0" type="1">
+
+          </ol>
+          <p class="instruction"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container justify-content-between">
+      <a class="navbar-brand" href="#">Recipe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btnSubmit btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- -----main body---- -->
+  <div class="container">
+    <!-- ----fav  -->
+    <div class="row justify-content-center favSec">
+      <div class="col-md-12">
+        <div class="favorites mt-3">
+          <h4>Favorites</h1>
+            <div class="fav-box d-flex align-items-center gap-3">
+
+
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----categories-------- -->
+    <div class="row justify-content-center">
+      <div class="col-md-12 ">
+        <div class="categories mt-3">
+          <h4>Categories</h1>
+            <div class="cat-box d-flex align-items-center gap-3">
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?beef" class="img-fluid" alt="">
+                <p class="">Beef</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?breakfast" class="img-fluid" alt="">
+                <p class="">Breakfast</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Chicken" class="img-fluid" alt="">
+                <p class="">Chicken</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Dessert" class="img-fluid" alt="">
+                <p class="">Dessert</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Pasta" class="img-fluid" alt="">
+                <p class="">Pasta</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Seafood" class="img-fluid" alt="">
+                <p class="">Seafood</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Vegan" class="img-fluid" alt="">
+                <p class="">Vegan</p>
+              </div>
+              <div class="item d-flex flex-column align-items-center">
+                <img src="https://source.unsplash.com/random?Vegetarian" class="img-fluid" alt="">
+                <p class="">Vegetarian</p>
+              </div>
+
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----category item view--- -->
+    <div class="row justify-content-center civ">
+      <div class="col-lg-12 col-md-8 flex-grow-1">
+        <div class="cat-item-view">
+          <h4></h4>
+          <div class="gallery d-flex justify-content-center">
+            <div class="cat-item-box text-black d-flex flex-wrap flex-column flex-md-row gap-3 w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ----search item view--- -->
+    <div class="row justify-content-center siv">
+      <div class="col-lg-12 col-md-8 flex-grow-1">
+        <div class="search-item-view">
+          <h4></h4>
+          <div class="gallery d-flex justify-content-center">
+            <div class="search-item-box text-black d-flex flex-wrap flex-column flex-md-row gap-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----random item view--- -->
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-md-8 flex-grow-1">
+        <div class="ran-item-view">
+          <h4>Random <i class="fa-solid fa-arrow-rotate-right ranBtn"></i></h4>
+          <div class="ran-item-box text-black d-flex flex-wrap flex-column flex-md-row justify-content-between">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
