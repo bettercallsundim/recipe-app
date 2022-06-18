@@ -54,7 +54,7 @@ catItems.forEach((item, ind) => {
   for (let x = 0; x < finalSearchData.length; x++) {
    catBox.innerHTML += `
     <div class="card" data-mealid="${finalSearchData[x].idMeal}" onclick="abspageload(${finalSearchData[x].idMeal})">
-    <div class="heart" onclick="hearting(this)"><i class="fa-solid fa-heart"></i></div>
+    <div class="heart" onclick="hearting(this,event)"><i class="fa-solid fa-heart"></i></div>
 
                 <img src="${finalSearchData[x].strMealThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -82,7 +82,7 @@ async function ranGen() {
  let finalRanData = await datas.meals;
  ranBox.innerHTML = `
   <div class="card" data-mealid="${finalRanData[0].idMeal}" onclick="abspageload(${finalRanData[0].idMeal})">
-  <div class="heart" onclick="hearting(this)"><i class="fa-solid fa-heart"></i></div>
+  <div class="heart" onclick="hearting(this,event)"><i class="fa-solid fa-heart"></i></div>
               <img src="${finalRanData[0].strMealThumb}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">${finalRanData[0].strMeal}</h5>
@@ -123,7 +123,7 @@ async function searchingFunc(e) {
   for (let x = 0; x < finalSearchData.length; x++) {
    searchitembox.innerHTML += `
     <div class="card" data-mealid="${finalSearchData[x].idMeal}" onclick="abspageload(${finalSearchData[x].idMeal})">
-    <div class="heart" onclick="hearting(this)"><i class="fa-solid fa-heart"></i></div>
+    <div class="heart" onclick="hearting(this,event)"><i class="fa-solid fa-heart"></i></div>
 
                 <img src="${finalSearchData[x].strMealThumb}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -138,7 +138,8 @@ async function searchingFunc(e) {
 }
 
 ////adding to favorites
-function hearting(lol) {
+function hearting(lol,ev) {
+  ev.stopPropagation();
  let mealID = lol.parentElement.dataset.mealid;
  let favImgSrc = lol.parentElement.querySelector("img").src;
  let favTitle = lol.parentElement.querySelector(
