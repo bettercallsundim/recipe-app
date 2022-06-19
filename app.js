@@ -7,25 +7,30 @@ const catMeal = "https://www.themealdb.com/api/json/v1/1/filter.php?c=";
 //scrolling horizontally
 
 const favBox = document.querySelector(".fav-box");
-favBox.addEventListener("wheel", scrollHorizon);
-function scrollHorizon(e) {
- e.preventDefault();
- if (e.deltaY > 0) {
-  favBox.scrollLeft += 200;
- } else {
-  favBox.scrollLeft -= 200;
- }
-}
-const catiBox = document.querySelector(".cat-box");
-catiBox.addEventListener("wheel", scrollpHorizon);
-function scrollpHorizon(e) {
- e.preventDefault();
- if (e.deltaY > 0) {
-  catiBox.scrollLeft += 200;
- } else {
-  catiBox.scrollLeft -= 200;
- }
-}
+// favBox.addEventListener("wheel", scrollHorizon);
+// function scrollHorizon(e) {
+//  e.preventDefault();
+//  if (e.deltaY > 0) {
+//   favBox.scrollLeft += 200;
+//  } else {
+//   favBox.scrollLeft -= 200;
+//  }
+// }
+// const catiBox = document.querySelector(".cat-box");
+// catiBox.addEventListener("wheel", scrollpHorizon);
+// function scrollpHorizon(e) {
+//  e.preventDefault();
+//  if (e.deltaY > 0) {
+//   catiBox.scrollLeft += 200;
+//  } else {
+//   catiBox.scrollLeft -= 200;
+//  }
+// }
+// --------scroll end---
+
+
+
+
 // --------------------------
 async function fetching(url) {
  const data = await fetch(url);
